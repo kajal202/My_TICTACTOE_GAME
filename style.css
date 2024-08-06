@@ -29,8 +29,6 @@
 }
 
 .box{
-    height: 9vh;
-    width: 9vh;
     border: 2px solid rgb(236, 229, 229);
     font-size: 5vw;
     cursor: pointer;
@@ -57,7 +55,7 @@
         margin-top: 25px;
     }
     .container { 
-        grid-template-rows: repeat(3, 20vw);
-        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3, 15vw);
     }
 }
