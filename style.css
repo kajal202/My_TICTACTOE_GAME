@@ -20,8 +20,8 @@
 .container{
     display: grid;
     padding: 5px;
-    grid-template-rows: repeat(3, 10vw);
-    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 15vw);
+    grid-template-columns: repeat(3, 15vw);
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     position: relative;
@@ -36,14 +36,14 @@
     justify-content: center;
     background-color: white;
     color: rgb(164, 92, 164);
-    margin: 3px;
+    margin: 5px;
 
 }
 .box:hover{
     background-color: rgb(164, 92, 164);
 }
 .gameContainer span{
-    font-size: 40px;
+    font-size: 60px;
 } 
 
 @media screen and (max-width: 950px)
