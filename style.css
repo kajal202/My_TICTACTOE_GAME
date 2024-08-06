@@ -19,9 +19,9 @@
 
 .container{
     display: grid;
-    padding: 5px;
-    grid-template-rows: repeat(3, 15vw);
-    grid-template-columns: repeat(3, 15vw);
+    padding: 10px;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     position: relative;
@@ -30,7 +30,7 @@
 
 .box{
     border: 2px solid rgb(236, 229, 229);
-    font-size: 5vw;
+    font-size: 10vw;
     cursor: pointer;
     border-radius: 10px;
     justify-content: center;
@@ -55,7 +55,7 @@
         margin-top: 25px;
     }
     .container { 
-        grid-template-rows: repeat(3, 15vw);
-        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
     }
 }
