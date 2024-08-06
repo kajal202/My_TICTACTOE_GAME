@@ -15,7 +15,7 @@
 
 
 
-        <div class="box "><span class="boxtext bg-white "></span></div>
+    
 
 .container{
     display: grid;
@@ -29,6 +29,8 @@
 }
 
 .box{
+    height: 9vh;
+    width: 9vh;
     border: 2px solid rgb(236, 229, 229);
     font-size: 5vw;
     cursor: pointer;
