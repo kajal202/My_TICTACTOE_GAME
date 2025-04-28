@@ -40,7 +40,7 @@
     font-size: 60px;
 } 
 
-@media screen and (max-width: 950px)
+@media screen and (max-width: 800px)
 {
     .gameContainer{
         flex-wrap: wrap;
