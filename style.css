@@ -16,8 +16,8 @@ You said:
 .container{
     display: grid;
     padding: 10px;
-    grid-template-rows: repeat(3, 7vw);
-    grid-template-columns: repeat(3, 7vw);
+    grid-template-rows: repeat(3, 6vw);
+    grid-template-columns: repeat(3, 6vw);
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     position: relative;
@@ -42,7 +42,7 @@ You said:
     font-size: 60px;
 } 
 
-@media screen and (max-width: 950px)
+@media screen and (max-width: 800px)
 {
     .gameContainer{
         flex-wrap: wrap;
@@ -51,7 +51,7 @@ You said:
         margin-top: 15px;
     }
     .container { 
-        grid-template-rows: repeat(3, 15vw);
-        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(3, 10vw);
+        grid-template-columns: repeat(3, 10vw);
     }
 } 
