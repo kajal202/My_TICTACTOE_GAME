@@ -13,10 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow:scroll;
 }
 
 .gameContainer {
+      
     text-align: center;
     width: 100%;
     height: 100%;
@@ -28,6 +29,7 @@ h1, .info {
 
 .container {
     display: grid;
+    justify-content: center;
     grid-template-rows: repeat(3, 120px);  /* Fixed height for rows */
     grid-template-columns: repeat(3, 120px);  /* Fixed width for columns */
     gap: 10px;
@@ -57,17 +59,17 @@ h1, .info {
 }
 
 .button {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .container {
-        grid-template-rows: repeat(3, 100px);  /* Adjust row height for smaller screens */
-        grid-template-columns: repeat(3, 100px);  /* Adjust column width for smaller screens */
+        grid-template-rows: repeat(3, 150px);  /* Adjust row height for smaller screens */
+        grid-template-columns: repeat(3, 150px);  /* Adjust column width for smaller screens */
     }
 
     .box {
-        font-size: 2.5rem;  /* Adjust font size for smaller screens */
+        font-size: 2rem;  /* Adjust font size for smaller screens */
     }
 
     h1, .info {
@@ -77,8 +79,8 @@ h1, .info {
 
 @media screen and (max-width: 500px) {
     .container {
-        grid-template-rows: repeat(3, 80px);  /* Even smaller grid items */
-        grid-template-columns: repeat(3, 80px);  /* Even smaller grid items */
+        grid-template-rows: repeat(3, 110px);  /* Even smaller grid items */
+        grid-template-columns: repeat(3, 110px);  /* Even smaller grid items */
     }
 
     .box {
@@ -89,3 +91,4 @@ h1, .info {
         font-size: 1.2rem;  /* Adjust font size for small screens */
     }
 }
+
