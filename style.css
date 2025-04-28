@@ -4,6 +4,7 @@ You said:
     margin: 0;
     padding: 0;
     background-color: #db9cdb;
+    
 }
 
 .gameContainer{ 
@@ -11,12 +12,6 @@ You said:
     justify-content: center;
     background-color: #db9cdb;
 } 
-
-
-
-
-
-    
 
 .container{
     display: grid;
