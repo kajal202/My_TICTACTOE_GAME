@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     background-color: #db9cdb;
-    
+    min-width: 100%;
 }
 
 .gameContainer{ 
@@ -16,8 +16,8 @@
 .container{
     display: grid;
     padding: 10px;
-    grid-template-rows: repeat(3, 25vw);
-    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: repeat(3, 30vw);
+    grid-template-columns: repeat(3, 30vw);
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     position: relative;
@@ -51,7 +51,7 @@
         margin-top: 15px;
     }
     .container { 
-        grid-template-rows: repeat(3, 20vw);
-        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 30vw);
+        grid-template-columns: repeat(3, 30vw);
     }
 } 
