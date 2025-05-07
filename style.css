@@ -1,4 +1,4 @@
-You said:
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
 *{
     margin: 0;
@@ -16,8 +16,8 @@ You said:
 .container{
     display: grid;
     padding: 10px;
-    grid-template-rows: repeat(3, 6vw);
-    grid-template-columns: repeat(3, 6vw);
+    grid-template-rows: repeat(3, 25vw);
+    grid-template-columns: repeat(3, 25vw);
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     position: relative;
@@ -32,7 +32,7 @@ You said:
     justify-content: center;
     background-color: white;
     color: rgb(164, 92, 164);
-    margin: 5px;
+    margin: 10px;
 
 }
 .box:hover{
@@ -42,7 +42,7 @@ You said:
     font-size: 60px;
 } 
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 950px)
 {
     .gameContainer{
         flex-wrap: wrap;
@@ -51,7 +51,7 @@ You said:
         margin-top: 15px;
     }
     .container { 
-        grid-template-rows: repeat(3, 10vw);
-        grid-template-columns: repeat(3, 10vw);
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
     }
 } 
