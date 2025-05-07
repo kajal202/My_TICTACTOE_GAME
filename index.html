@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous">
-  </head>
-  <body>
 
-    <div class="text-center gameContainer">
-      <h1 class="pt-3 text-center">Welcome to  MyTicTacToe </h1>
-      <p class="pb-2 text-center fs-5 ">"Just for Your Enjoyment" </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="gameContainer">
+    <!-- Text Section (Left) -->
+    <div class="gameText">
+      <h1 class="pt-3">Welcome to MyTicTacToe</h1>
+      <p class="pb-2 fs-5">"Just for Your Enjoyment"</p>
+    </div>
+  
+    <!-- Grid + Button Section (Right) -->
+    <div class="gameBoard">
       <h1 class="info">Turn for X</h1>
-      <div class="container"> 
-        <div class="box "><span class="boxtext bg-white "></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
-        <div class="box "><span class="boxtext bg-white"></span></div>
+      <div class="container">
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
+        <div class="box"><span class="boxtext"></span></div>
       </div>
-
-      <div class="pt-3 pb-2 px-4 button">
-        <button class="btn btn-outline-secondary" id="reset">Reset</button>
+  
+      <div class="buttonWrap">
+        <button class="btn btn-outline-secondary border-2" id="reset">Reset</button>
       </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
 
-
-      <script src="script.js"></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    </body>
-  </html>
+</html>
