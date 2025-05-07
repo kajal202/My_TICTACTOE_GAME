@@ -1,73 +1,78 @@
+
 let turn = "X";
 let isgameover = false;
-let turnCount=0;
+let turnCount = 0;
+
 // Function to change the turn
-const changeTurn = () => {
-  return turn === "X" ? "0" : "X";
-};
+const changeTurn = () => (turn === "X" ? "0" : "X");
 
 // Function to check for a win
 const checkWin = () => {
   let boxtext = document.getElementsByClassName("boxtext");
   let wins = [
-  [0, 1, 2],
-  [0, 3, 6],
-  [2, 5, 8],
-  [6, 7, 8],
-  [3, 4, 5],
-  [1, 4, 7],
-  [0, 4, 8],
-  [2, 4, 6],
+    [0, 1, 2],
+    [0, 3, 6],
+    [2, 5, 8],
+    [6, 7, 8],
+    [3, 4, 5],
+    [1, 4, 7],
+    [0, 4, 8],
+    [2, 4, 6],
   ];
-  wins.forEach((e) => {
+
+  for (let combo of wins) {
+    let [a, b, c] = combo;
     if (
-      boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
-      boxtext[e[2]].innerText === boxtext[e[1]].innerText &&
-      boxtext[e[0]].innerText !== ""
+      boxtext[a].innerText === boxtext[b].innerText &&
+      boxtext[c].innerText === boxtext[b].innerText &&
+      boxtext[a].innerText !== ""
     ) {
-      document.querySelector(".info").innerText =
-        boxtext[e[0]].innerText + " Won";
+      document.querySelector(".info").innerText = `${boxtext[a].innerText} Won!`;
       isgameover = true;
-      
+
+      // Highlight winning boxes
+      let boxes = document.getElementsByClassName("box");
+      boxes[a].classList.add("win");
+      boxes[b].classList.add("win");
+      boxes[c].classList.add("win");
+      return; // Exit after win
     }
-    else if(turnCount==9){
-      document.querySelector(".info").innerText =
-         "It's a draw";
-         isgameover = true;
-    }
-  });
+  }
+
+  // If all turns played and no winner
+  if (turnCount === 9 && !isgameover) {
+    document.querySelector(".info").innerText = "It's a draw!";
+    isgameover = true;
+  }
 };
 
-// // Game Logic
-// // music.play()
+// Game Logic
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach((element) => {
   let boxtext = element.querySelector(".boxtext");
   element.addEventListener("click", () => {
-    if (boxtext.innerText === "") {
+    if (boxtext.innerText === "" && !isgameover) {
       boxtext.innerText = turn;
       turnCount++;
-      turn = changeTurn();
-      // audioTurn.play();
       checkWin();
       if (!isgameover) {
-        document.getElementsByClassName("info")[0].innerText =
-          "Turn for " + turn;
+        turn = changeTurn();
+        document.querySelector(".info").innerText = `Turn for ${turn}`;
       }
     }
   });
 });
 
-// Add onclick listener to reset button
-reset.addEventListener("click", () => {
+// Reset button logic
+document.getElementById("reset").addEventListener("click", () => {
   let boxtexts = document.querySelectorAll(".boxtext");
-  Array.from(boxtexts).forEach((element) => {
-    element.innerText = "";
-  });
+  boxtexts.forEach((el) => (el.innerText = ""));
+
+  // Remove win classes
+  document.querySelectorAll(".box").forEach((el) => el.classList.remove("win"));
+
   turn = "X";
+  turnCount = 0;
   isgameover = false;
-  document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
- 
+  document.querySelector(".info").innerText = "Turn for " + turn;
 });
-
-
