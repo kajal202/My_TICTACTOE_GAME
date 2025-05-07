@@ -15,7 +15,7 @@ html, body {
 
 /* Center the entire game layout */
 .gameContainer {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh;
